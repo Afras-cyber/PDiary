@@ -40,7 +40,7 @@ public class DBdiaryHelper extends SQLiteOpenHelper {
         return res;
     }
         public Cursor getinformation() {
-            String[] columns = {D_COL1};
+            String[] columns = {D_COL1,D_COL2,D_COL3};
             SQLiteDatabase db = getReadableDatabase();
          //   String selection = D_COL3 + "=?";
             Cursor cursor = db.query(TABLE_DIARY, columns, null, null, null, null, null);

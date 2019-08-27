@@ -36,10 +36,13 @@ public class DiaryActivity extends AppCompatActivity {
         else{
             while(cursor.moveToNext()){
                 thelist.add(cursor.getString(2));
-                ListAdapter listAdapter=new ArrayAdapter<>(this,R.layout.activity_diary,thelist);
-                listView.setAdapter(listAdapter);
             }
+
         }
+
+        ListAdapter listAdapter=new ArrayAdapter<>(this,android.R.layout.simple_list_item_1, android.R.id.text1,thelist);
+        listView.setAdapter(listAdapter);
+
         ////////////////////////////////////////////////////////
         writeDiary.setOnClickListener(new View.OnClickListener() {
             @Override

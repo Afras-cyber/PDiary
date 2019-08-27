@@ -53,8 +53,8 @@ public class writeDiaryActivity extends AppCompatActivity {
                    db.addUser1(pwd);
                     //if(val>0){
                         Toast.makeText(writeDiaryActivity.this,"Saving..",Toast.LENGTH_LONG).show();
-                      //  Intent intent =new Intent(Main2Activity.this,MainActivity.class);
-                        //startActivity(intent);
+                       Intent intent =new Intent(writeDiaryActivity.this,DiaryActivity.class);
+                        startActivity(intent);
                     //}else{
                       //  Toast.makeText(Main2Activity.this,"Registation error",Toast.LENGTH_LONG).show();
 
