@@ -5,8 +5,12 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.TextView;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 public class DBdiaryHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "diary.db";
@@ -24,7 +28,7 @@ public class DBdiaryHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        sqLiteDatabase.execSQL("CREATE TABLE DIARY (D_ID INTEGER PRIMARY KEY AUTOINCREMENT,subject TEXT,discripton TEXT)");
+        sqLiteDatabase.execSQL("CREATE TABLE DIARY (D_ID INTEGER PRIMARY KEY AUTOINCREMENT,subject TEXT,discripton TEXT,currentDate TEXT)");
 
     }
 
@@ -35,10 +39,19 @@ public class DBdiaryHelper extends SQLiteOpenHelper {
     }
 
     public long addUser1(String desc,String subject) {
+        ///////////////////////////////////////////////////
+        Calendar calendar = Calendar.getInstance();
+        String currentdate = DateFormat.getDateInstance(DateFormat.SHORT).format(calendar.getTime());
+       // TextView textView2 = findViewById(R.id.id_time);
+        SimpleDateFormat format=new SimpleDateFormat("HH:mm:ss");
+        String time=format.format(calendar.getTime())+"\n"+currentdate;
+        //textView2.setText(time);
+        ////////////////////////////////////////////////////
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-         contentValues.put("subject", subject);
+        contentValues.put("subject", subject);
         contentValues.put("discripton", desc);
+        contentValues.put("currentDate",time);
         long res = db.insert("DIARY", null, contentValues);
         db.close();
         return res;
@@ -59,8 +72,8 @@ public class DBdiaryHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery("select * from DIARY", null);
         while (cursor.moveToNext()) {
-
-            String id = cursor.getString(0);
+           // String id1 = cursor.getString(0);
+            String id = cursor.getString(3);
             String sub = cursor.getString(1);
             String desc = cursor.getString(2);
 

@@ -64,7 +64,6 @@ public class DiaryActivity extends AppCompatActivity {
 
     private void loadDatainListView() {
         arrayList=dBdiaryHelper.getAlldata();
-
         dAdapter=new diaryAdapter(this,arrayList);
         listView.setAdapter(dAdapter);
         dAdapter.notifyDataSetChanged();
