@@ -18,10 +18,28 @@
 
         />
     <EditText
+
+        android:id="@+id/editxt_subDiary"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#8DB1D8"
+        android:hint="What is special today... tell me.."
+        android:textStyle="italic"
+
+        />
+
+
+    <EditText
         android:id="@+id/editxt_diary"
-        android:layout_margin="15dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#8DB1D8"/>
+        android:layout_margin="15dp"
+        android:background="#8DB1D8"
+        android:hint="What's Happend today.."
+        android:cursorVisible="true"
+        android:textAlignment="textStart" />
 
 </LinearLayout>

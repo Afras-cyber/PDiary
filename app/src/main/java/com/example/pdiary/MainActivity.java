@@ -38,18 +38,18 @@ public class MainActivity extends AppCompatActivity {
        b1.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
-               String user=e1.getText().toString().trim();
-               String pwd=e2.getText().toString().trim();
+           /*   String user=e1.getText().toString().trim();
+              String pwd=e2.getText().toString().trim();
                Boolean res=db.checkUser(user,pwd);
-               if(res== true) {
+               if(res== true) {*/
                    Toast.makeText(MainActivity.this,"Successful Login",Toast.LENGTH_LONG).show();
                    Intent intent =new Intent(MainActivity.this,HomeActivity.class);
                    startActivity(intent);
-               }
+              /* }
                else {
                    Toast.makeText(MainActivity.this,"Unsuccessful Login",Toast.LENGTH_LONG).show();
 
-               }
+               }*/
 
            }
        });
