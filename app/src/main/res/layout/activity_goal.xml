@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/calenderbg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:gravity="center_horizontal"
+        android:textSize="25dp"
+        android:id="@+id/txt_calender"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        />
+
+    <CalendarView
+        android:id="@+id/calender_view_id"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content">
+
+    </CalendarView>
+    <LinearLayout
+        android:id="@+id/dayContents"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content">
+
+
+        <EditText
+            android:layout_width="320dp"
+            android:layout_height="40dp"
+            android:id="@+id/textInput"
+            android:maxLines="5"
+            android:hint="Write Somthing.."/>
+
+        <Button
+            android:id="@+id/saveTextButton"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="save"/>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/txt_show_id"
+        android:layout_width="match_parent"
+        android:textColor="@color/black"
+        android:gravity="center_horizontal"
+        android:textSize="25dp"
+        android:maxLines="5"
+        android:layout_height="60dp" />
+
+</LinearLayout>
