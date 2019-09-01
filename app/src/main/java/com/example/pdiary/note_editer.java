@@ -21,8 +21,8 @@ public class note_editer extends AppCompatActivity {
 
 
         EditText editText=(EditText) findViewById(R.id.editText);
-
         Intent intent= getIntent();
+
         noteId =intent.getIntExtra("noteId",-1);
         if(noteId!= -1){
             editText.setText(notes.notes.get(noteId));

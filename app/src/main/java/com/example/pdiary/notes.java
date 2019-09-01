@@ -65,15 +65,17 @@ public class notes extends AppCompatActivity {
         notes.add("Example note ");
         arrayAdapter = new ArrayAdapter(this,android.R.layout.simple_dropdown_item_1line,notes);
         listview.setAdapter(arrayAdapter);
+        /*
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(getApplicationContext(),note_editer.class);
-                intent.putExtra("noteid",i);
-                startActivity(intent);
+               // Intent intent = new Intent(getApplicationContext(),note_editer.class);
+                //intent.putExtra("noteid",i);
+
+              //  startActivity(intent);
 
             }
-        });
+        });*/
 
         listview.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
