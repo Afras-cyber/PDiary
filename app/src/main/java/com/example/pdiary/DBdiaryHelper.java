@@ -55,9 +55,10 @@ public class DBdiaryHelper extends SQLiteOpenHelper {
         long res = db.insert("DIARY", null, contentValues);
         db.close();
         return res;
-    }/*
-        public Cursor getinformation() {
-            String[] columns = {D_COL1,D_COL2,D_COL3};
+    }
+        public Cursor getinformation(int set) {
+
+            String[] columns = {String.valueOf(set),D_COL2,D_COL3};
             SQLiteDatabase db = getReadableDatabase();
          //   String selection = D_COL3 + "=?";
             Cursor cursor = db.query(TABLE_DIARY, columns, null, null, null, null, null);
@@ -65,7 +66,7 @@ public class DBdiaryHelper extends SQLiteOpenHelper {
                 cursor.moveToNext();
             }
             return cursor;
-        }*/
+        }
 
     public ArrayList<DiarydataProvider> getAlldata() {
         ArrayList<DiarydataProvider> arrayList = new ArrayList<>();
@@ -84,5 +85,8 @@ public class DBdiaryHelper extends SQLiteOpenHelper {
         }
         return arrayList;
     }
+
+
+
 
 }

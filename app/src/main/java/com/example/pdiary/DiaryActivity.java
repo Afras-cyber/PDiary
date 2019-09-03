@@ -6,22 +6,24 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class DiaryActivity extends AppCompatActivity {
+public class DiaryActivity extends AppCompatActivity  {
+
     Button writeDiary;
     ListView listView;
     DBdiaryHelper dBdiaryHelper;
-    /////////////////////////////////////////
     ArrayList<DiarydataProvider> arrayList;
     diaryAdapter dAdapter;
-    /////////////////////////////////////////
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,10 +33,10 @@ public class DiaryActivity extends AppCompatActivity {
 
         writeDiary=(Button)findViewById(R.id.btn_diary_write);
         listView=(ListView)findViewById(R.id.listV_diary);
-        /////////////////////////////////////////////////
+
         arrayList=new ArrayList<>();
         loadDatainListView();
-        /////////////////////////////////////////////////
+
 /*
         ArrayList<String>thelist=new ArrayList<>();
         Cursor cursor=dBdiaryHelper.getinformation();
@@ -59,7 +61,23 @@ public class DiaryActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                Cursor cursor=  dBdiaryHelper.getinformation(position);
+                if(cursor.getCount()==0){
+                    Toast.makeText(DiaryActivity.this,"Data base empty",Toast.LENGTH_LONG).show();
+                }
+                else{
+                    while(cursor.moveToNext()){
+                        //int j= (int) dAdapter.getItemId(position);
+                     //   setContentView(R.layout.activity_show_diary);
+                        Toast.makeText(DiaryActivity.this,"it's working",Toast.LENGTH_LONG).show();
+                    }
 
+                }}
+        });
+        
     }
 
     private void loadDatainListView() {

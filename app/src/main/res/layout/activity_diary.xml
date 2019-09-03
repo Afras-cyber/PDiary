@@ -13,6 +13,8 @@
         android:layout_height="40dp"
         android:text="Add Diary"
         />
+
+
     <ListView
         android:id="@+id/listV_diary"
         android:background="#D5DD9E"

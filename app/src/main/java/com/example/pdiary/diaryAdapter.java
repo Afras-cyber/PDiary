@@ -25,7 +25,7 @@ public class diaryAdapter extends BaseAdapter {
 
     @Override
     public Object getItem(int position) {
-        return arrayList.get(position);
+        return arrayList.get(getCount()- position -1);
     }
 
     @Override

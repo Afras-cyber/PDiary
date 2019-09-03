@@ -8,9 +8,7 @@ import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import com.example.pdiary.R;
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;

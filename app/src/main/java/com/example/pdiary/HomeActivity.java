@@ -12,7 +12,7 @@ import android.widget.Button;
 import com.example.pdiary.Goal.GoalActivity;
 
 public class HomeActivity extends AppCompatActivity {
-    Button note,diary,goal;
+    Button note,diary,goal,darkpage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,8 @@ public class HomeActivity extends AppCompatActivity {
         note=(Button)findViewById(R.id.btn_note);
         diary=(Button)findViewById(R.id.btn_diarypg);
         goal=(Button)findViewById(R.id.btn_goal_id);
+        darkpage=(Button)findViewById(R.id.btn_darkPage_id);
+
 
         note.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,7 +31,7 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent1);
             }
         });
-        diary.setOnClickListener(new View.OnClickListener() {
+        darkpage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent2= new Intent(HomeActivity.this,DiaryActivity.class);

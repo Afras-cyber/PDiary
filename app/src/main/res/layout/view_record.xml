@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:text="desc"
-                android:maxLines="2"
+                android:maxLines="100"
                 android:gravity="center"/>
         </LinearLayout>
 </LinearLayout>
