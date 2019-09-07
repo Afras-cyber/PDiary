@@ -1,4 +1,4 @@
-package com.example.pdiary;
+package com.example.pdiary.Login;
 
 import android.content.ContentValues;
 import android.content.Context;

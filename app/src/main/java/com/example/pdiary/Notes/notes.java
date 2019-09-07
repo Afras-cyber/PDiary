@@ -1,4 +1,4 @@
-package com.example.pdiary;
+package com.example.pdiary.Notes;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -16,6 +16,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import com.example.pdiary.R;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -36,7 +38,7 @@ public class notes extends AppCompatActivity {
         super.onOptionsItemSelected(item);
 
         if(item.getItemId()==R.id.add_note){
-            Intent intent =new Intent(getApplicationContext(),note_editer.class);
+            Intent intent =new Intent(getApplicationContext(), note_editer.class);
             startActivity(intent);
             return true;
         }
@@ -91,7 +93,7 @@ public class notes extends AppCompatActivity {
                                 notes.remove(itemToDelete);
                                 arrayAdapter.notifyDataSetChanged();
                                 SharedPreferences sharedPreferences= getApplicationContext().getSharedPreferences("com.example.myapp", Context.MODE_PRIVATE);
-                                HashSet<String> set =new HashSet(com.example.pdiary.notes.notes);
+                                HashSet<String> set =new HashSet(com.example.pdiary.Notes.notes.notes);
                                 sharedPreferences.edit().putStringSet("notes",set).apply();
                             }
                         })

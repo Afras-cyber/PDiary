@@ -1,4 +1,4 @@
-package com.example.pdiary;
+package com.example.pdiary.DarkPage;
 
 public class DiarydataProvider {
     private String date;

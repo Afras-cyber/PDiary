@@ -1,4 +1,4 @@
-package com.example.pdiary;
+package com.example.pdiary.Notes;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,9 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
+
+import com.example.pdiary.Notes.notes;
+import com.example.pdiary.R;
 
 import java.util.HashSet;
 

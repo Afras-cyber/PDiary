@@ -1,11 +1,10 @@
-package com.example.pdiary;
+package com.example.pdiary.DarkPage;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.widget.TextView;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -56,17 +55,6 @@ public class DBdiaryHelper extends SQLiteOpenHelper {
         db.close();
         return res;
     }
-        public Cursor getinformation(int set) {
-
-            String[] columns = {String.valueOf(set),D_COL2,D_COL3};
-            SQLiteDatabase db = getReadableDatabase();
-         //   String selection = D_COL3 + "=?";
-            Cursor cursor = db.query(TABLE_DIARY, columns, null, null, null, null, null);
-            if (cursor != null){
-                cursor.moveToNext();
-            }
-            return cursor;
-        }
 
     public ArrayList<DiarydataProvider> getAlldata() {
         ArrayList<DiarydataProvider> arrayList = new ArrayList<>();

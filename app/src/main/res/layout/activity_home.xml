@@ -37,7 +37,7 @@
             android:id="@+id/btn_goal_id"
             android:layout_marginRight="20dp"
             android:layout_width="140dp"
-            android:background="@drawable/goalsicon"
+
             android:layout_height="140dp" />
         <Button
             android:id="@+id/btn_darkPage_id"

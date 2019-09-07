@@ -9,21 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ShowDiary"></activity>
+        <activity android:name=".Diary.UpdateActivity"></activity>
+        <activity android:name=".Diary.Diary_Main" />
+        <activity android:name=".Diary.Add_DataActivity" />
+        <activity android:name=".ShowDiary" />
         <activity android:name=".Goal.GoalActivity" />
-        <activity android:name=".writeDiaryActivity" />
-        <activity android:name=".DiaryActivity" />
-        <activity android:name=".note_editer" />
-        <activity android:name=".notes" />
+        <activity android:name=".DarkPage.writeDiaryActivity" />
+        <activity android:name=".DarkPage.DiaryActivity" />
+        <activity android:name=".Notes.note_editer" />
+        <activity android:name=".Notes.notes" />
         <activity android:name=".HomeActivity" />
-        <activity android:name=".Main2Activity">
+        <activity android:name=".Login.Main2Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".Login.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

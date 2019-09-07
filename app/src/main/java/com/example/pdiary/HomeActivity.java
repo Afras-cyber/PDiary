@@ -9,7 +9,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.pdiary.DarkPage.DiaryActivity;
+import com.example.pdiary.Diary.Diary_Main;
 import com.example.pdiary.Goal.GoalActivity;
+import com.example.pdiary.Notes.notes;
 
 public class HomeActivity extends AppCompatActivity {
     Button note,diary,goal,darkpage;
@@ -27,14 +30,14 @@ public class HomeActivity extends AppCompatActivity {
         note.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent1= new Intent(HomeActivity.this,notes.class);
+                Intent intent1= new Intent(HomeActivity.this, notes.class);
                 startActivity(intent1);
             }
         });
         darkpage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent2= new Intent(HomeActivity.this,DiaryActivity.class);
+                Intent intent2= new Intent(HomeActivity.this, DiaryActivity.class);
                 startActivity(intent2);
             }
         });
@@ -43,6 +46,13 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent3= new Intent(HomeActivity.this,GoalActivity.class);
                 startActivity(intent3);
+            }
+        });
+        diary.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent4= new Intent(HomeActivity.this, Diary_Main.class);
+                startActivity(intent4);
             }
         });
     }

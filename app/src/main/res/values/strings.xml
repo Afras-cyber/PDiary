@@ -12,4 +12,9 @@
     <string name="for_login">For Login</string>
     <string name="Login">Login</string>
     <string name="btnRegister">Register</string>
+    <string name="title_activity_data_view">DataViewActivity</string>
+    <string name="title_activity_add_data">AddDataActivity</string>
+    <string name="appbar_scrolling_view_behavior" />
+
+
 </resources>

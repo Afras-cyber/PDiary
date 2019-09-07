@@ -1,4 +1,4 @@
-package com.example.pdiary;
+package com.example.pdiary.DarkPage;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,8 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.pdiary.R;
 
 public class writeDiaryActivity extends AppCompatActivity {
     EditText e1, e2,e3;
@@ -55,7 +56,7 @@ public class writeDiaryActivity extends AppCompatActivity {
                    db.addUser1(sub,desc);
                     //if(val>0){
                         Toast.makeText(writeDiaryActivity.this,"Saving..",Toast.LENGTH_LONG).show();
-                       Intent intent =new Intent(writeDiaryActivity.this,DiaryActivity.class);
+                       Intent intent =new Intent(writeDiaryActivity.this, DiaryActivity.class);
                         startActivity(intent);
                     //}else{
                       //  Toast.makeText(Main2Activity.this,"Registation error",Toast.LENGTH_LONG).show();

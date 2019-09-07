@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:gravity="center_horizontal"
     android:layout_height="match_parent"
-    tools:context=".DiaryActivity">
+    tools:context=".DarkPage.DiaryActivity">
     <Button
         android:id="@+id/btn_diary_write"
         android:layout_width="match_parent"

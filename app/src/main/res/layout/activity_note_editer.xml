@@ -11,7 +11,7 @@
     android:paddingEnd="0dp"
     android:paddingRight="0dp"
     android:paddingBottom="0dp"
-    tools:context=".note_editer">
+    tools:context=".Notes.note_editer">
 
     <EditText
         android:id="@+id/editText"

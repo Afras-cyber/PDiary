@@ -1,4 +1,4 @@
-package com.example.pdiary;
+package com.example.pdiary.Login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.pdiary.HomeActivity;
+import com.example.pdiary.R;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -30,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         t1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(MainActivity.this,Main2Activity.class);
+                Intent intent=new Intent(MainActivity.this, Main2Activity.class);
                 startActivity(intent);
             }
         });
@@ -43,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
                Boolean res=db.checkUser(user,pwd);
                if(res== true) {*/
                    Toast.makeText(MainActivity.this,"Successful Login",Toast.LENGTH_LONG).show();
-                   Intent intent =new Intent(MainActivity.this,HomeActivity.class);
+                   Intent intent =new Intent(MainActivity.this, HomeActivity.class);
                    startActivity(intent);
               /* }
                else {

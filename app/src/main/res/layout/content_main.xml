@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:paddingBottom="5dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="5dp"
+    android:orientation="vertical"
+
+    tools:context=".Diary.Diary_Main"
+    tools:showIn="@layout/activity_diary__main">
+
+    <ListView
+        android:id="@+id/ListviewId"
+        style="@android:style/TextAppearance.DeviceDefault.Widget.Button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        >
+
+    </ListView>
+
+
+</LinearLayout>
